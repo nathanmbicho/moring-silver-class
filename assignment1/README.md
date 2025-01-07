@@ -1,4 +1,4 @@
-# Blog Management App
+# Portfolio Blog Management App - Assignment Week 1
 
 This is a simple portfolio blog post management application built with React. It provides required features to CREATE, READ AND UPDATE blog posts. The app is designed with a tailwind UI and allows users to manage blogs, view them, and edit.
 
