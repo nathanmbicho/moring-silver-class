@@ -27,7 +27,7 @@ describe('posts reducer', () => {
         expect(state.posts[0]).toEqual({
             ...newPost,
             id: expect.any(Number),
-            datetime: expect.any(String),
+            createdAt: expect.any(String),
         });
     });
 
@@ -40,7 +40,7 @@ describe('posts reducer', () => {
                 category: 'Last Year',
                 authorName: 'Kasongo',
                 authorRole: 'Tester',
-                datetime: '2024-01-01',
+                createdAt: '2024-01-01',
             }],
         };
 
@@ -51,7 +51,7 @@ describe('posts reducer', () => {
             category: 'New Year',
             authorName: 'Mobali na ngai',
             authorRole: 'Senior Tester',
-            datetime: '2025-01-01',
+            createdAt: '2025-01-01',
         };
 
         const action = editPost(updatedPost);

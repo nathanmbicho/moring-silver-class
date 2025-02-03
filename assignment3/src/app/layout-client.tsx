@@ -1,6 +1,5 @@
 'use client';
-import { Provider } from 'react-redux';
-import { store } from './store/store';
+import { AuthProvider } from "./context/authContext";
 
 export default function ClientLayout({
   children,
@@ -8,8 +7,8 @@ export default function ClientLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Provider store={store}>
-      {children}
-    </Provider>
+      <AuthProvider>
+        {children}
+      </AuthProvider>
   );
 }

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import Image from "next/image";
 
 const getGeneratedImage = (authorName) => {
@@ -27,11 +26,11 @@ const PostCard = ({ post, onEdit }) => (
         </div>
         <div className="mt-auto pt-4">
             <p className="text-xs text-gray-500">
-                <span className="text-gray-400">Posted At:-</span> {post.datetime}
+                <span className="text-gray-400">Posted At:-</span> {post.createdAt}
             </p>
             <div className="flex justify-end space-x-4 mt-2 text-sm">
                 <button
-                    onClick={() => onEdit(post.id)}
+                    onClick={() => onEdit(post)}
                     className="text-indigo-600 rounded bg-indigo-100 hover:text-white hover:bg-indigo-500 px-4 py-1"
                 >
                     Edit
@@ -40,18 +39,5 @@ const PostCard = ({ post, onEdit }) => (
         </div>
     </div>
 );
-
-PostCard.propTypes = {
-    post: PropTypes.shape({
-        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        category: PropTypes.string.isRequired,
-        authorName: PropTypes.string.isRequired,
-        authorRole: PropTypes.string.isRequired,
-        datetime: PropTypes.string.isRequired,
-    }).isRequired,
-    onEdit: PropTypes.func.isRequired,
-};
 
 export default PostCard;

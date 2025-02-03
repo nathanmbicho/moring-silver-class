@@ -1,25 +1,19 @@
 export interface Post {
-    id: number;
+    id: string;
     title: string;
     description: string;
     category: string;
     authorName: string;
     authorRole: string;
-    datetime: string;
-  }
+    createdAt: string;
+}
 
-  export interface PostFormData {
+export interface PostFormData {
+    id: string;
     title: string;
     description: string;
     category: string;
     authorName: string;
     authorRole: string;
-  }
-
-  export interface PostsState {
-    posts: Post[];
-  }
-
-  export interface RootState {
-    posts: PostsState;
-  }
+    createdAt: string;
+}
